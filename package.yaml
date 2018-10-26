@@ -1,0 +1,68 @@
+name:                gitm
+version:             0.1.0.0
+github:              fredefox/gitm
+license:             BSD3
+license-file:        LICENSE
+author:              Frederik Hangøj Iversen
+maintainer:          fhi.1990@gmail.com
+copyright:           2018 Frederik Hangøj Iversen
+
+extra-source-files:
+- README.md
+- CHANGELOG.md
+
+description:
+  Please see the README on GitHub at <https://github.com/fredefox/gitm#readme>
+
+default-extensions:
+  - ConstraintKinds
+  - DeriveGeneric
+  - FlexibleContexts
+  - FlexibleInstances
+  - GADTs
+  - GeneralizedNewtypeDeriving
+  - LambdaCase
+  - NamedWildCards
+  - OverloadedStrings
+  - ScopedTypeVariables
+  - StandaloneDeriving
+  - TupleSections
+  - TypeApplications
+  - TypeFamilies
+  - TypeSynonymInstances
+  - UnicodeSyntax
+  - ViewPatterns
+  - DerivingStrategies
+  - EmptyCase
+
+dependencies:
+  - base >= 4.7 && < 5
+  - mtl
+  # Perhaps use turtle in stead?
+  - shelly
+  - text
+  - containers
+  - unordered-containers
+  - aeson
+  - yaml
+  - prettyprinter
+  - file-embed
+  - directory
+  # - gitlib
+  - bytestring
+  - exceptions
+  - string-conversions
+
+library:
+  source-dirs: src
+
+executables:
+  gitm:
+    main:                Main.hs
+    source-dirs:         gitm
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - gitm

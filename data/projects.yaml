@@ -1,0 +1,70 @@
+# agda:
+# - agda
+
+# AlDanial:
+# - cloc
+
+# citizennet:
+# - purescript-halogen-template
+
+# daherb:
+# - GF-latin
+
+# ekmett:
+# - succinct-binary
+
+fredefox:
+- cat
+- dotfiles
+- ethambda-agda
+- ethambda-hs
+- ethambda-idr
+- fredefox.github.io
+- frelude
+- hal-basic
+- mono-traversable
+- naughty-nice
+- rhyme
+- symbols
+- time-keeper
+- val
+
+# GrammaticalFramework:
+# - gf-contrib
+# - gf-core
+# - gf-rgl
+
+# haikarainen:
+# - light
+
+# haskell:
+# - haddock
+# - haskell-ide-engine
+
+# haskell-suite:
+# - haskell-src-exts
+
+# idris-lang:
+# - Idris-dev
+
+# janmasrovira:
+# - masters-thesis-doc
+# - phileas
+
+# MUSTE-Project:
+# - Mulle
+# - pgf
+# - worklog.yaml
+
+# nurpax:
+# - sqlite-simple
+
+# PandorasFox:
+# - i3lock-color
+
+# sciurus:
+# - i3tree
+
+# sdiehl:
+# - protolude
+# - repline
