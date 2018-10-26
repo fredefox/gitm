@@ -34,6 +34,7 @@ default-extensions:
   - ViewPatterns
   - DerivingStrategies
   - EmptyCase
+  - NoImplicitPrelude
 
 dependencies:
   - base >= 4.7 && < 5
@@ -52,6 +53,8 @@ dependencies:
   - bytestring
   - exceptions
   - string-conversions
+  - optparse-applicative
+  - frelude
 
 library:
   source-dirs: src

@@ -1,19 +1,17 @@
 {-# Language TemplateHaskell #-}
-{-# OPTIONS_GHC -Wall #-}
+{-# OPTIONS_GHC -Wall -Wcompat #-}
+
 module Git.GitM (cloneStoredProjects, github) where
 
+import Frelude
 import Data.Functor (void)
 import qualified Shelly
-import Data.Text (Text)
 import qualified Data.Yaml as Yaml
 import Data.ByteString (ByteString)
-import Data.Text.Prettyprint.Doc (Pretty(pretty), Doc)
 import Data.Text.Prettyprint.Doc.Render.Text (putDoc)
 import Data.HashMap.Strict (HashMap)
 import qualified Data.HashMap.Strict as HashMap
 import Data.FileEmbed (embedFile)
-import Control.Monad.Catch (MonadThrow)
-import Data.String.Conversions (convertString)
 
 projects ∷ ByteString
 projects = $(embedFile "data/projects.yaml")

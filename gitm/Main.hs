@@ -1,9 +1,9 @@
-{-# OPTIONS_GHC -Wall #-}
+{-# OPTIONS_GHC -Wall -Wcompat #-}
+
 module Main (main) where
 
+import Frelude
 import qualified System.Environment as System
-import Data.Functor (void)
-import Data.Text (Text)
 import qualified Data.Text as Text
 
 import qualified Git.GitM as GitM
