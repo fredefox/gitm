@@ -117,5 +117,5 @@ segs s = case dropWhile isSlash s of
                                              
 subdirs ∷ FilePath → IO [FilePath]
 subdirs root = do
-  c ← map (\p → root <> p </> "") <$> listDirectory root
+  c ← map (\p → root </> p) <$> listDirectory root
   filterM doesDirectoryExist c

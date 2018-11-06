@@ -60,4 +60,4 @@ arg m = O.strArgument (O.metavar m)
 
 -- TODO Stub
 scanParser ∷ ParserInfo Scan
-scanParser = Scan <$ O.info empty (O.header "Scan all repos")
+scanParser = Scan <$ O.info (pure ()) (O.header "Scan all repos")

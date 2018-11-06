@@ -73,12 +73,16 @@ cloneTo Manager{..} = do
   printf "git clone %s %s\n" rawUrl fp
   GitM.clone [rawUrl, convertString fp]
   where
-  fp = home </> convertString user </> convertString repo
+  fp = githome </> convertString user </> convertString repo
   LocSpec{..} = locSpec
 
 -- TODO Stub
+-- TODO The usage of the self-rolled '(</>)' is quite brittle.
 home ∷ FilePath
-home = "/home/fredefox/git/"
+home = "/home/fredefox"
+
+githome ∷ FilePath
+githome = home </> "git"
 
 -- | This is not super elegant, but we assume the URL looks something
 -- like this: @git://git@example.org/user/repo.git@.  We then proceed
@@ -97,5 +101,5 @@ projectsConfig = "projects.yaml"
 
 scan ∷ Options.Scan → IO ()
 scan _ = do
-  repos ← GitM.scan home
+  repos ← GitM.scan githome
   ByteString.writeFile projectsConfig (Yaml.encode repos)
