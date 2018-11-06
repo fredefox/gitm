@@ -55,6 +55,8 @@ dependencies:
   - string-conversions
   - optparse-applicative
   - frelude
+  - network-uri
+  - vector
 
 library:
   source-dirs: src
